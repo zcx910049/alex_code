@@ -1,0 +1,715 @@
+ERROR 2017-11-11 15:26:47,058 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(user_name=username)
+TypeError: get_one_passport() got an unexpected keyword argument 'user_name'
+ERROR 2017-11-11 15:26:49,406 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(user_name=username)
+TypeError: get_one_passport() got an unexpected keyword argument 'user_name'
+ERROR 2017-11-11 15:31:50,632 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(user_name=username)
+TypeError: get_one_passport() got an unexpected keyword argument 'user_name'
+ERROR 2017-11-11 15:32:51,105 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 552, in get_field
+    return self.fields_map[field_name]
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1362, in names_to_path
+    field = opts.get_field(name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 554, in get_field
+    raise FieldDoesNotExist('%s has no field named %r' % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Passport has no field named 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(username=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1304, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1332, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1144, in build_filter
+    lookups, parts, reffed_aggregate = self.solve_lookup_type(arg)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1030, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1391, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: create_time, email, id, is_delete, password, update_time, user_name
+ERROR 2017-11-11 15:32:51,964 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 552, in get_field
+    return self.fields_map[field_name]
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1362, in names_to_path
+    field = opts.get_field(name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 554, in get_field
+    raise FieldDoesNotExist('%s has no field named %r' % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Passport has no field named 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(username=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1304, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1332, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1144, in build_filter
+    lookups, parts, reffed_aggregate = self.solve_lookup_type(arg)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1030, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1391, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: create_time, email, id, is_delete, password, update_time, user_name
+ERROR 2017-11-11 15:33:22,120 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 552, in get_field
+    return self.fields_map[field_name]
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1362, in names_to_path
+    field = opts.get_field(name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 554, in get_field
+    raise FieldDoesNotExist('%s has no field named %r' % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Passport has no field named 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(username=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1304, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1332, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1144, in build_filter
+    lookups, parts, reffed_aggregate = self.solve_lookup_type(arg)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1030, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1391, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: create_time, email, id, is_delete, password, update_time, user_name
+ERROR 2017-11-11 15:33:22,937 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 552, in get_field
+    return self.fields_map[field_name]
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1362, in names_to_path
+    field = opts.get_field(name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 554, in get_field
+    raise FieldDoesNotExist('%s has no field named %r' % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Passport has no field named 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(username=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1304, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1332, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1144, in build_filter
+    lookups, parts, reffed_aggregate = self.solve_lookup_type(arg)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1030, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1391, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: create_time, email, id, is_delete, password, update_time, user_name
+ERROR 2017-11-11 15:33:38,118 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 552, in get_field
+    return self.fields_map[field_name]
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1362, in names_to_path
+    field = opts.get_field(name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/options.py", line 554, in get_field
+    raise FieldDoesNotExist('%s has no field named %r' % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Passport has no field named 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(username=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 325, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1304, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1332, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1144, in build_filter
+    lookups, parts, reffed_aggregate = self.solve_lookup_type(arg)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1030, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1391, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: create_time, email, id, is_delete, password, update_time, user_name
+ERROR 2017-11-11 15:34:37,290 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 6!
+ERROR 2017-11-11 15:34:39,533 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 6!
+ERROR 2017-11-11 15:34:41,434 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 6!
+ERROR 2017-11-11 15:35:00,672 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 6!
+ERROR 2017-11-11 15:35:01,837 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 6!
+ERROR 2017-11-11 15:36:38,253 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 6!
+ERROR 2017-11-11 15:38:54,791 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/register_handle/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 32, in register_handle
+    Passport.objects.add_one_passport(username=username,password=password,email=email)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 14, in add_one_passport
+    obj = model_class(user_name=username,password=get_hash(password),email=email)
+  File "/home/python/dailyfresh/dailyfresh/utils/get_hash.py", line 7, in get_hash
+    str = '@#!%*' + str + '^&*('
+TypeError: Can't convert 'NoneType' object to str implicitly
+ERROR 2017-11-11 15:45:46,297 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 4!
+ERROR 2017-11-11 15:45:47,712 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 45, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 4!
+ERROR 2017-11-11 18:04:43,233 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 43, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 4!
+ERROR 2017-11-11 18:04:44,267 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 43, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 4!
+ERROR 2017-11-11 18:05:15,190 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/check_user_exist/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 43, in check_user_exist
+    passport = Passport.objects.get_one_passport(username)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 24, in get_one_passport
+    obj = self.get(user_name=username)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 338, in get
+    (self.model._meta.object_name, num)
+df_user.models.MultipleObjectsReturned: get() returned more than one Passport -- it returned 4!
+ERROR 2017-11-12 09:53:50,957 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/register_handle/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/utils/__init__.py", line 423, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 449, in _ensured
+    return fun(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/messaging.py", line 177, in _publish
+    channel = self.channel
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/messaging.py", line 194, in _get_channel
+    channel = self._channel = channel()
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/utils/__init__.py", line 425, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/messaging.py", line 209, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 771, in default_channel
+    self.connection
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/transport/pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/amqp/connection.py", line 165, in __init__
+    self.transport = self.Transport(host, connect_timeout, ssl)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/amqp/connection.py", line 186, in Transport
+    return create_transport(host, connect_timeout, ssl)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/amqp/transport.py", line 299, in create_transport
+    return TCPTransport(host, connect_timeout)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/amqp/transport.py", line 95, in __init__
+    raise socket.error(last_err)
+OSError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 26, in register_handle
+    send_register_success_mail.delay(username=username,password=password,email=email)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/celery/app/task.py", line 461, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/celery/app/task.py", line 573, in apply_async
+    **dict(self._get_exec_options(), **options)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/celery/app/base.py", line 354, in send_task
+    reply_to=reply_to or self.oid, **options
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/celery/app/amqp.py", line 310, in publish_task
+    **kwargs
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/messaging.py", line 172, in publish
+    routing_key, mandatory, immediate, exchange, declare)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 470, in _ensured
+    interval_max)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 382, in ensure_connection
+    interval_start, interval_step, interval_max, callback)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/utils/__init__.py", line 246, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 250, in connect
+    return self.connection
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/kombu/transport/pyamqp.py", line 116, in establish_connection
+    conn = self.Connection(**opts)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/amqp/connection.py", line 165, in __init__
+    self.transport = self.Transport(host, connect_timeout, ssl)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/amqp/connection.py", line 186, in Transport
+    return create_transport(host, connect_timeout, ssl)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/amqp/transport.py", line 299, in create_transport
+    return TCPTransport(host, connect_timeout)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/amqp/transport.py", line 95, in __init__
+    raise socket.error(last_err)
+OSError: [Errno 111] Connection refused
+ERROR 2017-11-12 10:03:56,484 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/python/dailyfresh/dailyfresh/dailyfresh/urls.py", line 21, in <module>
+    url(r'^user/',include('df_user.urls'))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/python/dailyfresh/dailyfresh/df_user/urls.py", line 2, in <module>
+    from df_user import views
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 6, in <module>
+    from df_user.task import send_register_success_mail
+  File "/home/python/dailyfresh/dailyfresh/df_user/task.py", line 2, in <module>
+    from djcelery import task
+ImportError: cannot import name 'task'
+ERROR 2017-11-12 10:03:56,917 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/python/dailyfresh/dailyfresh/dailyfresh/urls.py", line 21, in <module>
+    url(r'^user/',include('df_user.urls'))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/python/dailyfresh/dailyfresh/df_user/urls.py", line 2, in <module>
+    from df_user import views
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 6, in <module>
+    from df_user.task import send_register_success_mail
+  File "/home/python/dailyfresh/dailyfresh/df_user/task.py", line 2, in <module>
+    from djcelery import task
+ImportError: cannot import name 'task'
+ERROR 2017-11-12 10:54:16,247 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/python/dailyfresh/dailyfresh/dailyfresh/urls.py", line 21, in <module>
+    url(r'^user/',include('df_user.urls'))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/python/dailyfresh/dailyfresh/df_user/urls.py", line 2, in <module>
+    from df_user import views
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 6, in <module>
+    from df_user.task import send_register_success_mail
+ImportError: No module named 'df_user.task'
+ERROR 2017-11-12 10:54:16,565 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/python/dailyfresh/dailyfresh/dailyfresh/urls.py", line 21, in <module>
+    url(r'^user/',include('df_user.urls'))
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/python/dailyfresh/dailyfresh/df_user/urls.py", line 2, in <module>
+    from df_user import views
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 6, in <module>
+    from df_user.task import send_register_success_mail
+ImportError: No module named 'df_user.task'
+ERROR 2017-11-15 14:30:46,810 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/address/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/utils/decorators.py", line 9, in wrapper
+    return view_func(request,*view_args,**view_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 138, in address
+    addr = Address.objects.get(passport_id=passport_id)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+df_user.models.DoesNotExist: Address matching query does not exist.
+ERROR 2017-11-15 21:47:11,783 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/address/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/utils/decorators.py", line 9, in wrapper
+    return view_func(request,*view_args,**view_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 138, in address
+    addr = Address.objects.get(passport_id=passport_id)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+df_user.models.DoesNotExist: Address matching query does not exist.
+ERROR 2017-11-17 14:49:05,642 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/address/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/utils/decorators.py", line 9, in wrapper
+    return view_func(request,*view_args,**view_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 138, in address
+    addr = Address.objects.get_one_address(passport_id=passport_id,is_default=True)
+TypeError: get_one_address() got an unexpected keyword argument 'is_default'
+ERROR 2017-11-17 14:54:38,566 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/address/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/utils/decorators.py", line 9, in wrapper
+    return view_func(request,*view_args,**view_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 138, in address
+    addr = Address.objects.get_one_address(passport_id=passport_id,is_default=True)
+TypeError: get_one_address() got an unexpected keyword argument 'is_default'
+ERROR 2017-11-18 11:11:27,800 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/utils/decorators.py", line 9, in wrapper
+    return view_func(request,*view_args,**view_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 129, in user
+    addr = Address.objects.get_one_address(passport)
+NameError: name 'passport' is not defined
+ERROR 2017-11-19 11:11:10,017 /home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py base.py handle_uncaught_exception 256: Internal Server Error: /user/address/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/py3_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/utils/decorators.py", line 9, in wrapper
+    return view_func(request,*view_args,**view_kwargs)
+  File "/home/python/dailyfresh/dailyfresh/df_user/views.py", line 143, in address
+    addr = Address.objects.get_one_address(passport_id=passport_id)
+  File "/home/python/dailyfresh/dailyfresh/df_user/models.py", line 50, in get_one_address
+    addr = self.get_one_object(passport_id,is_default=True)
+TypeError: get_one_object() takes 1 positional argument but 2 were given
